@@ -7,13 +7,13 @@ public class DrawProjection : MonoBehaviour
     CannonController cannonController;
     LineRenderer lineRenderer;
 
-    // Number of points on the line
+    // Number of points on the line.
     public int numPoints = 50;
 
-    // distance between those points on the line
+    // Distance between those points on the line.
     public float timeBetweenPoints = 0.1f;
 
-    // The physics layers that will cause the line to stop being drawn
+    // The physics layers that will cause the line to stop being drawn.
     public LayerMask CollidableLayers;
     void Start()
     {
