@@ -7,8 +7,10 @@ public class CannonController : MonoBehaviour
     public float rotationSpeed = 1;
     public float BlastPower = 5;
 
+    public GameObject Particles;
     public GameObject Cannonball;
     public Transform ShotPoint;
+    private bool Fire = true;
 
     private void Update()
     {
@@ -18,13 +20,22 @@ public class CannonController : MonoBehaviour
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + 
             new Vector3(0, HorizontalRotation * rotationSpeed, -VericalRotation * rotationSpeed));
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) & Fire)
         {
             GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
             CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
-
+            StartCoroutine(fireCheck());
 
         }
+        if (Input.GetMouseButtonDown(0) & Fire)
+        {
+            GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
+            CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
+            StartCoroutine(fireCheck());
+
+        }
+        
+
 
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -37,6 +48,15 @@ public class CannonController : MonoBehaviour
 
     }
 
+    private IEnumerator fireCheck()
+    {
+        Fire = false;
+        Particles.SetActive(true);
+        yield return new WaitForSecondsRealtime(2);
+        Particles.SetActive(false);
+        Fire = true;
+
+    }
     
 
 

@@ -16,10 +16,16 @@ public class BoatController : MonoBehaviour
 	float movementFactor;
 	float horizontalInput;
 	float steerFactor;
+	private Animator anim;
+	private float RudderLeft = 0f;
+	private float RudderRight = 0f;
+
+
 
 	void Start()
 	{
 		RigidBody = GetComponent<Rigidbody>();
+		anim = GetComponent<Animator>();
 	}
 
 		// Update is called once per frame
@@ -28,6 +34,25 @@ public class BoatController : MonoBehaviour
 		Balance();
 		Movement();
 		Steer();
+
+		float rotation = Input.GetAxis("Horizontal");
+
+		anim.SetFloat("Rudder", rotation);
+		anim.SetFloat("Sails", rotation);
+
+
+		/*	if (Input.GetKeyDown(KeyCode.A))
+				{
+					RudderLeft = 1.0f;
+				}
+
+				if (Input.GetKeyDown(KeyCode.D))
+				{
+					RudderRight = 1.0f;
+				}
+
+				anim.SetBool("Rudder Left", RudderLeft);
+				anim.SetBool("Rudder Right", RudderRight);*/
 	}
 
 	void Balance()
