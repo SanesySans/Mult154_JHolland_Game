@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/WebGL Scene.unity
+    path: Assets/Scenes/Start.unity
+    guid: b98f2b028c85ce64cbf3ed019371f277
+  - enabled: 1
+    path: Assets/Scenes/WebGLScene.unity
     guid: b084b56eed86b2c4d8a2c7f910beb65a
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: c2143c14b69e21c4d9c7ea3b0bae885d
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 39552af2ca498504f822abf951094e3a
   m_configObjects: {}

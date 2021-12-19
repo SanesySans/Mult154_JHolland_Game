@@ -135,5 +135,5 @@ Material:
     - _EMISSION_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SPECULAR_COLOR: {r: 1, g: 1, b: 1, a: 0}
-    - _SeaColor: {r: 0, g: 0.37099907, b: 0.4039215, a: 1}
+    - _SeaColor: {r: 0, g: 0.37099904, b: 0.40392148, a: 1}
   m_BuildTextureStacks: []

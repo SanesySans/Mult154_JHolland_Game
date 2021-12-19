@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - Minimap
   - Enemy
+  - EnemyCannonball
+  - PlayerCannonball
   layers:
   - Default
   - TransparentFX

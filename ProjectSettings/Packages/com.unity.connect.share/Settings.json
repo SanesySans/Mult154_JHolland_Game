@@ -21,7 +21,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/Jesse/Desktop/Classwork/Mult 154/Mult154_JHolland_Game/WebGL Builds;;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/Jesse/Desktop/Classwork/Mult 154/Mult154_JHolland_Game/WebGL Builds/WebGLBuild2;C:/Users/Jesse/Desktop/Classwork/Mult 154/Mult154_JHolland_Game/WebGL Builds;;;;;;;;\"}"
             }
         ]
     }

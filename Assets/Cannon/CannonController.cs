@@ -27,13 +27,7 @@ public class CannonController : MonoBehaviour
             StartCoroutine(fireCheck());
 
         }
-        if (Input.GetMouseButtonDown(0) & Fire)
-        {
-            GameObject CreatedCannonball = Instantiate(Cannonball, ShotPoint.position, ShotPoint.rotation);
-            CreatedCannonball.GetComponent<Rigidbody>().velocity = ShotPoint.transform.up * BlastPower;
-            StartCoroutine(fireCheck());
 
-        }
         
 
 
